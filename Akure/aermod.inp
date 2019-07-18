@@ -51,14 +51,18 @@ SO YBADJ     STACK1    22.50   26.81   30.31   32.89   34.47   35.00
    SRCGROUP  STACK1 STACK1                                                                                                                   
 SO FINISHED                                                               
 
-
+RE STARTING 
+RE GRIDCART CAR1 STA
+                 XPNTS -100. -200. -100. -50. 0 50. 100. 200. 300
+                 YPNTS -100. -200. -100. -50. 0 50. 100. 200. 300
+RE GRIDCART CAR1 END
                                                                                                                                     
-RE STARTING
-RE GRIDPOLR POL1 STA
-                 ORIG STACK1
-                 DIST 175. 350. 500. 1000.
-                 GDIR 36 10 10
-RE GRIDPOLR POL1 END
+**RE STARTING
+**RE GRIDPOLR POL1 STA
+**                 ORIG STACK1
+**                 DIST 175. 350. 500. 1000.
+**                 GDIR 36 10 10
+**RE GRIDPOLR POL1 END
 RE FINISHED                                                                                                                         
                                                                                                                                     
 ME STARTING                                                                                                                         

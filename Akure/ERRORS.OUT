@@ -11,8 +11,10 @@
 PW CODE    L#      MODNAM                       ERROR MESSAGES                      HINTS
 -- ---- ------- ------------  -------------------------------------------------- ------------
   
-ME W182      71       MEOPEN: MMIF-generated meteorological inputs were used     BETA Non-Def
-ME W530      71       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     SITEDATA
+RE W250      56       XYPNTS: Duplicate XPNT/DIST or YPNT/DIR Specified for GRID         CAR1
+RE W250      57       XYPNTS: Duplicate XPNT/DIST or YPNT/DIR Specified for GRID         CAR1
+ME W182      75       MEOPEN: MMIF-generated meteorological inputs were used     BETA Non-Def
+ME W530      75       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     SITEDATA
 MX W394       1       METEXT: Met data may be from outdated version of AERMET:     No NAD/ADJ
 MX W479       1       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.860
 MX W479       2       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.957

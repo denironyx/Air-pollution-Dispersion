@@ -1,5 +1,5 @@
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   1
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -37,7 +37,7 @@
  **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
      and Calculates PERIOD Averages
   
- **This Run Includes:      1 Source(s);       1 Source Group(s); and     144 Receptor(s)
+ **This Run Includes:      1 Source(s);       1 Source Group(s); and      81 Receptor(s)
 
                 with:      1 POINT(s), including
                            0 POINTCAP(s) and      0 POINTHOR(s)
@@ -66,13 +66,13 @@
                   Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
                   Output Units   = MICROGRAMS/M**3                         
   
- **Approximate Storage Requirements of Model =      3.6 MB of RAM.
+ **Approximate Storage Requirements of Model =      3.5 MB of RAM.
   
  **Detailed Error/Message File:   ERRORS.OUT                                                                                      
  **File Created for Event Model:  aertest_evt.inp                                                                                 
  **File for Summary of Results:   AERTEST.SUM                                                                                     
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   2
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -97,7 +97,7 @@
 
                                                  1.54,   3.09,   5.14,   8.23,  10.80,
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   3
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -147,7 +147,7 @@
 
  F indicates top of profile (=1) or below (=0)
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   4
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -160,16 +160,16 @@
 GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-STACK1    1ST HIGHEST VALUE IS     261.55880 AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
-          2ND HIGHEST VALUE IS     206.77506 AT (    -171.01,     -469.85,     0.00,     0.00,    0.00)  GP  POL1    
-          3RD HIGHEST VALUE IS     178.42316 AT (    -500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
-          4TH HIGHEST VALUE IS     176.49196 AT (    -250.00,     -433.01,     0.00,     0.00,    0.00)  GP  POL1    
-          5TH HIGHEST VALUE IS     157.35413 AT (    -866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
-          6TH HIGHEST VALUE IS     147.84269 AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
-          7TH HIGHEST VALUE IS     138.34629 AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
-          8TH HIGHEST VALUE IS     137.22222 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
-          9TH HIGHEST VALUE IS     132.15137 AT (     500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
-         10TH HIGHEST VALUE IS     131.36897 AT (    -433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1    1ST HIGHEST VALUE IS      75.59211 AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+          2ND HIGHEST VALUE IS      47.48785 AT (    -200.00,      200.00,     0.00,     0.00,    0.00)  GC  CAR1    
+          3RD HIGHEST VALUE IS      46.33179 AT (    -200.00,     -200.00,     0.00,     0.00,    0.00)  GC  CAR1    
+          4TH HIGHEST VALUE IS      43.21329 AT (    -100.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+          5TH HIGHEST VALUE IS      43.21329 AT (    -100.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+          6TH HIGHEST VALUE IS      39.77977 AT (    -200.00,      100.00,     0.00,     0.00,    0.00)  GC  CAR1    
+          7TH HIGHEST VALUE IS      36.47545 AT (    -200.00,       50.00,     0.00,     0.00,    0.00)  GC  CAR1    
+          8TH HIGHEST VALUE IS      32.05464 AT (     300.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+          9TH HIGHEST VALUE IS      30.47500 AT (    -200.00,        0.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         10TH HIGHEST VALUE IS      30.35193 AT (    -100.00,      200.00,     0.00,     0.00,    0.00)  GC  CAR1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -177,7 +177,7 @@ STACK1    1ST HIGHEST VALUE IS     261.55880 AT (    -342.02,     -939.69,     0
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   5
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -190,9 +190,9 @@ STACK1    1ST HIGHEST VALUE IS     261.55880 AT (    -342.02,     -939.69,     0
 GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   
-STACK1   HIGH   1ST HIGH VALUE IS    8325.92907  ON 17010218: AT (    -866.03,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   2ND HIGH VALUE IS    6669.28869  ON 17010521: AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   3RD HIGH VALUE IS    6528.09873  ON 17010119: AT (    -866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1   HIGH   1ST HIGH VALUE IS    4425.87053  ON 17010920: AT (     300.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         HIGH   2ND HIGH VALUE IS    1690.72314  ON 17010318: AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         HIGH   3RD HIGH VALUE IS    1468.70193  ON 17010622: AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -200,7 +200,7 @@ STACK1   HIGH   1ST HIGH VALUE IS    8325.92907  ON 17010218: AT (    -866.03,  
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   6
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -213,9 +213,9 @@ STACK1   HIGH   1ST HIGH VALUE IS    8325.92907  ON 17010218: AT (    -866.03,  
 GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   
-STACK1   HIGH   1ST HIGH VALUE IS    3640.94350  ON 17010803: AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   2ND HIGH VALUE IS    3166.02957  ON 17010124: AT (     500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   3RD HIGH VALUE IS    2223.09623  ON 17010521: AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1   HIGH   1ST HIGH VALUE IS    1475.29018  ON 17010921: AT (     300.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         HIGH   2ND HIGH VALUE IS     587.54192  ON 17010824: AT (    -200.00,     -200.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         HIGH   3RD HIGH VALUE IS     489.56731  ON 17010624: AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -223,7 +223,7 @@ STACK1   HIGH   1ST HIGH VALUE IS    3640.94350  ON 17010803: AT (     642.79,  
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   7
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -236,9 +236,9 @@ STACK1   HIGH   1ST HIGH VALUE IS    3640.94350  ON 17010803: AT (     642.79,  
 GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   
-STACK1   HIGH   1ST HIGH VALUE IS    1597.71047  ON 17011008: AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   2ND HIGH VALUE IS    1535.75592  ON 17010808: AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   3RD HIGH VALUE IS     976.43178  ON 17010108: AT (    -866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1   HIGH   1ST HIGH VALUE IS     553.91971  ON 17010524: AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         HIGH   2ND HIGH VALUE IS     294.04577  ON 17010224: AT (    -200.00,     -200.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         HIGH   3RD HIGH VALUE IS     202.16129  ON 17010924: AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -246,7 +246,7 @@ STACK1   HIGH   1ST HIGH VALUE IS    1597.71047  ON 17011008: AT (     642.79,  
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   8
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -259,9 +259,9 @@ STACK1   HIGH   1ST HIGH VALUE IS    1597.71047  ON 17011008: AT (     642.79,  
 GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   
-STACK1   HIGH   1ST HIGH VALUE IS     619.45435  ON 17010124: AT (    -866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   2ND HIGH VALUE IS     538.85592  ON 17010824: AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   3RD HIGH VALUE IS     493.01892  ON 17010524: AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1   HIGH   1ST HIGH VALUE IS     227.15953  ON 17010524: AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         HIGH   2ND HIGH VALUE IS     122.43066  ON 17010924: AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
+         HIGH   3RD HIGH VALUE IS      92.78021  ON 17010624: AT (    -200.00,      300.00,     0.00,     0.00,    0.00)  GC  CAR1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -269,7 +269,7 @@ STACK1   HIGH   1ST HIGH VALUE IS     619.45435  ON 17010124: AT (    -866.03,  
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:46:40
                                                                                                                        PAGE   9
  **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
@@ -278,7 +278,7 @@ STACK1   HIGH   1ST HIGH VALUE IS     619.45435  ON 17010124: AT (    -866.03,  
   --------- Summary of Total Messages --------
   
  A Total of            0 Fatal Error Message(s)
- A Total of          106 Warning Message(s)
+ A Total of          108 Warning Message(s)
  A Total of            1 Informational Message(s)
 
  A Total of          240 Hours Were Processed
@@ -293,8 +293,10 @@ STACK1   HIGH   1ST HIGH VALUE IS     619.45435  ON 17010124: AT (    -866.03,  
   
   
     ********   WARNING MESSAGES   ******** 
- ME W182      71       MEOPEN: MMIF-generated meteorological inputs were used     BETA Non-Def
- ME W530      71       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     SITEDATA
+ RE W250      56       XYPNTS: Duplicate XPNT/DIST or YPNT/DIR Specified for GRID         CAR1
+ RE W250      57       XYPNTS: Duplicate XPNT/DIST or YPNT/DIR Specified for GRID         CAR1
+ ME W182      75       MEOPEN: MMIF-generated meteorological inputs were used     BETA Non-Def
+ ME W530      75       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     SITEDATA
  MX W394       1       METEXT: Met data may be from outdated version of AERMET:     No NAD/ADJ
  MX W479       1       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.860
  MX W479       2       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.957
