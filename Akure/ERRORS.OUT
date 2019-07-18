@@ -11,7 +11,6 @@
 PW CODE    L#      MODNAM                       ERROR MESSAGES                      HINTS
 -- ---- ------- ------------  -------------------------------------------------- ------------
   
-CO W361      15       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
-CO W362      15       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     3-hr Ave
-CO W362      15       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     8-hr Ave
-CO W362      15       COCARD: Multiyear 1h NO2/SO2 processing not applicable for    24-hr Ave
+OU E203      74       OUPLOT: Invalid Parameter Specified.  Troubled Parameter:         GRPID
+OU E202      75       OUSUMM: Too Many Parameters Specified For the Keyword of       SUMMFILE
+OU E125       0        SETUP: Missing FINISHED-Runstream File Incomplete: ISTAT=        11110

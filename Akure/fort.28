@@ -1,0 +1,22 @@
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:29:29
+                                                                                                                       PAGE   1
+ **MODELOPTs:  
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            3 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+ OU E203      74       OUPLOT: Invalid Parameter Specified.  Troubled Parameter:         GRPID
+ OU E202      75       OUSUMM: Too Many Parameters Specified For the Keyword of       SUMMFILE
+ OU E125       0        SETUP: Missing FINISHED-Runstream File Incomplete: ISTAT=        11110
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
