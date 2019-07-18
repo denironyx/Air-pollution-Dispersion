@@ -1,7 +1,7 @@
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   1
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
                                             ***     MODEL SETUP OPTIONS SUMMARY       ***
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -24,16 +24,15 @@
          5. No Exponential Decay.
   
  **Other Options Specified:
-         CCVR_Sub - Meteorological data includes CCVR substitutions
+         FASTALL  - Use effective sigma-y to optimize meander for 
+                    POINT and VOLUME sources, and hybrid approach
+                    to optimize AREA sources (formerly TOXICS option)
+         MMIFData - Use BETA option for MMIF met data inputs
+                    MMIF VERSION 3.3 2016-12-09
   
  **Model Assumes No FLAGPOLE Receptor Heights.
   
- **The User Specified a Pollutant Type of:  SO2     
-
- **NOTE: Special processing requirements applicable for the 1-hour SO2 NAAQS have been disabled!!!
-         User has specified non-standard averaging periods:    3-HR   8-HR  24-HR         
-         High ranked 1-hour values are NOT averaged across the number of years modeled, and
-         complete years of data are NOT required.
+ **The User Specified a Pollutant Type of:  PM10    
   
  **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
      and Calculates PERIOD Averages
@@ -56,6 +55,7 @@
           Model Outputs Tables of PERIOD Averages by Receptor
           Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
           Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of High Values for Plotting (PLOTFILE Keyword)
           Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
   
  **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
@@ -72,9 +72,9 @@
  **File Created for Event Model:  aertest_evt.inp                                                                                 
  **File for Summary of Results:   AERTEST.SUM                                                                                     
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   2
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
                                             *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
                                                                (1=YES; 0=NO)
@@ -86,7 +86,7 @@
             1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
             1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
             1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
-            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
 
                 NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
 
@@ -97,80 +97,79 @@
 
                                                  1.54,   3.09,   5.14,   8.23,  10.80,
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   3
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
                                     *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
 
-   Surface file:   aermet2.sfc                                                                        Met Version:  15181
-   Profile file:   aermet2.pfl                                                                     
+   Surface file:   AKURE_dry.sfc                                                                      Met Version:  15181
+   Profile file:   AKURE_dry.pfl                                                                   
    Surface format: FREE                                                                                                     
    Profile format: FREE                                                                                                     
-   Surface station no.:    14735                  Upper air station no.:    14735
-                  Name: ALBANY,NY                                  Name: ALBANY,NY                               
-                  Year:   1988                                     Year:   1988
+   Surface station no.:    99999                  Upper air station no.:    99999
+                  Name: AKURE,NG                                   Name: AKURE,NG                                
+                  Year:   2017                                     Year:   2017
 
  First 24 hours of scalar data
  YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
- 88 03 01  61 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
- 88 03 01  61 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
- 88 03 01  61 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
- 88 03 01  61 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
- 88 03 01  61 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
- 88 03 01  61 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
- 88 03 01  61 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
- 88 03 01  61 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
- 88 03 01  61 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
- 88 03 01  61 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
- 88 03 01  61 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
- 88 03 01  61 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
- 88 03 01  61 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
- 88 03 01  61 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
- 88 03 01  61 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
- 88 03 01  61 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
- 88 03 01  61 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
- 88 03 01  61 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
- 88 03 01  61 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
- 88 03 01  61 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
- 88 03 01  61 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
- 88 03 01  61 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
- 88 03 01  61 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
- 88 03 01  61 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ 17 01 01   1 01   -4.3  0.040 -9.000 -9.000 -999.   25.      1.4  0.50  -1.00   1.00    1.92    5.   10.0  290.1    2.0
+ 17 01 01   1 02   -5.4  0.045 -9.000 -9.000 -999.   25.      1.5  0.50  -1.00   1.00    2.09   28.   10.0  290.1    2.0
+ 17 01 01   1 03   -7.3  0.056 -9.000 -9.000 -999.   25.      2.1  0.50  -1.00   1.00    2.43   56.   10.0  289.8    2.0
+ 17 01 01   1 04  -15.3  0.107 -9.000 -9.000 -999.   25.      7.0  0.50  -1.00   1.00    3.12   62.   10.0  289.3    2.0
+ 17 01 01   1 05  -20.7  0.140 -9.000 -9.000 -999.   77.     11.7  0.50  -1.00   1.00    3.26   58.   10.0  289.0    2.0
+ 17 01 01   1 06  -18.7  0.126 -9.000 -9.000 -999.   49.      9.5  0.50  -1.00   0.65    3.23   57.   10.0  288.4    2.0
+ 17 01 01   1 07  -14.2  0.282 -9.000 -9.000 -999.  112.    193.4  0.50  -1.00   0.26    2.61   58.   10.0  292.7    2.0
+ 17 01 01   1 08   53.3  0.420  0.634  0.011  140.  140.   -101.8  0.50   0.36   0.16    2.38   80.   10.0  296.5    2.0
+ 17 01 01   1 09  142.5  0.604  1.278  0.009  459.  459.   -121.4  0.50   0.62   0.13    3.47   95.   10.0  299.0    2.0
+ 17 01 01   1 10  221.0  0.679  1.642  0.009  640.  640.   -113.4  0.50   0.77   0.12    3.75  108.   10.0  300.3    2.0
+ 17 01 01   1 11  260.0  0.627  1.893  0.007  836.  836.    -75.8  0.50   0.81   0.12    2.94   95.   10.0  301.6    2.0
+ 17 01 01   1 12  261.7  0.654  2.037  0.005 1034. 1034.    -85.4  0.50   0.78   0.12    3.24   91.   10.0  303.5    2.0
+ 17 01 01   1 13  234.4  0.583  2.100  0.005 1249. 1249.    -66.7  0.50   0.72   0.12    2.52   93.   10.0  303.9    2.0
+ 17 01 01   1 14  169.8  0.547  1.995  0.005 1442. 1442.    -74.2  0.50   0.59   0.13    2.45   75.   10.0  304.3    2.0
+ 17 01 01   1 15   82.3  0.451  1.641  0.006 1541. 1541.    -79.9  0.50   0.35   0.14    2.07   71.   10.0  305.2    2.0
+ 17 01 01   1 16   -2.0  0.362  0.695  0.005 1207. 1207.   -424.9  0.50  -1.00   0.20    2.47   84.   10.0  305.4    2.0
+ 17 01 01   1 17  -14.5  0.097 -9.000 -9.000 -999.  564.      6.2  0.50  -1.00   0.42    3.02  102.   10.0  300.8    2.0
+ 17 01 01   1 18   -8.9  0.058 -9.000 -9.000 -999.   26.      1.9  0.50  -1.00   1.00    2.55  135.   10.0  296.5    2.0
+ 17 01 01   1 19   -6.0  0.041 -9.000 -9.000 -999.   26.      1.0  0.50  -1.00   1.00    2.01   63.   10.0  295.5    2.0
+ 17 01 01   1 20   -4.0  0.035 -9.000 -9.000 -999.   26.      1.0  0.50  -1.00   1.00    1.43    2.   10.0  295.7    2.0
+ 17 01 01   1 21   -4.8  0.038 -9.000 -9.000 -999.   26.      1.0  0.50  -1.00   1.00    1.78  354.   10.0  293.9    2.0
+ 17 01 01   1 22   -1.8  0.027 -9.000 -9.000 -999.   26.      1.0  0.50  -1.00   1.00    0.77  328.   10.0  293.3    2.0
+ 17 01 01   1 23  -13.0  0.083 -9.000 -9.000 -999.   26.      3.8  0.50  -1.00   1.00    3.04  317.   10.0  291.5    2.0
+ 17 01 01   1 24   -7.5  0.051 -9.000 -9.000 -999.   26.      1.6  0.50  -1.00   1.00    2.29  329.   10.0  291.4    2.0
 
 
  First hour of profile data
  YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
- 88 03 01 01   10.0 0  318.    0.80   273.8   48.7    0.11    0.48
- 88 03 01 01   50.0 0  323.    2.00   275.0   14.7  -99.00    0.50
- 88 03 01 01  100.0 1  320.    3.70   274.8    9.1    0.41    0.58
+ 17 01 01 01    2.0 0 -999.  -99.00   290.1   99.0  -99.00  -99.00
+ 17 01 01 01   10.0 1    5.    1.92  -999.0   99.0  -99.00  -99.00
 
  F indicates top of profile (=1) or below (=0)
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   4
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
-                                        *** THE SUMMARY OF MAXIMUM PERIOD (    96 HRS) RESULTS ***
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (   240 HRS) RESULTS ***
 
 
-                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+                                    ** CONC OF PM10     IN MICROGRAMS/M**3                          **
 
                                                                                                              NETWORK
 GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-ALL       1ST HIGHEST VALUE IS      24.85172 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
-          2ND HIGHEST VALUE IS      23.13772 AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
-          3RD HIGHEST VALUE IS      21.03526 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
-          4TH HIGHEST VALUE IS      19.33505 AT (     328.89,     -119.71,     0.00,     0.00,    0.00)  GP  POL1    
-          5TH HIGHEST VALUE IS      17.19043 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
-          6TH HIGHEST VALUE IS      16.86864 AT (     866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
-          7TH HIGHEST VALUE IS      15.01122 AT (     939.69,     -342.02,     0.00,     0.00,    0.00)  GP  POL1    
-          8TH HIGHEST VALUE IS      14.27333 AT (     268.12,     -224.98,     0.00,     0.00,    0.00)  GP  POL1    
-          9TH HIGHEST VALUE IS      12.80321 AT (     492.40,      -86.82,     0.00,     0.00,    0.00)  GP  POL1    
-         10TH HIGHEST VALUE IS      12.38150 AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1    1ST HIGHEST VALUE IS     261.55880 AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     206.77506 AT (    -171.01,     -469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     178.42316 AT (    -500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     176.49196 AT (    -250.00,     -433.01,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     157.35413 AT (    -866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS     147.84269 AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS     138.34629 AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS     137.22222 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS     132.15137 AT (     500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS     131.36897 AT (    -433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -178,22 +177,22 @@ ALL       1ST HIGHEST VALUE IS      24.85172 AT (     433.01,     -250.00,     0
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   5
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
                                                 *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
 
 
-                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+                                    ** CONC OF PM10     IN MICROGRAMS/M**3                          **
 
                                                       DATE                                                                    NETWORK
 GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   
-ALL      HIGH   1ST HIGH VALUE IS     753.65578  ON 88030111: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   2ND HIGH VALUE IS     421.98804  ON 88030113: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   3RD HIGH VALUE IS     371.81219  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1   HIGH   1ST HIGH VALUE IS    8325.92907  ON 17010218: AT (    -866.03,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    6669.28869  ON 17010521: AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS    6528.09873  ON 17010119: AT (    -866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -201,22 +200,22 @@ ALL      HIGH   1ST HIGH VALUE IS     753.65578  ON 88030111: AT (     303.11,  
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   6
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
                                                 *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
 
 
-                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+                                    ** CONC OF PM10     IN MICROGRAMS/M**3                          **
 
                                                       DATE                                                                    NETWORK
 GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   
-ALL      HIGH   1ST HIGH VALUE IS     329.96009  ON 88030112: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   2ND HIGH VALUE IS     261.07802  ON 88030112: AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   3RD HIGH VALUE IS     124.30430  ON 88030118: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1   HIGH   1ST HIGH VALUE IS    3640.94350  ON 17010803: AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    3166.02957  ON 17010124: AT (     500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS    2223.09623  ON 17010521: AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -224,22 +223,22 @@ ALL      HIGH   1ST HIGH VALUE IS     329.96009  ON 88030112: AT (     433.01,  
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   7
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
                                                 *** THE SUMMARY OF HIGHEST  8-HR RESULTS ***
 
 
-                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+                                    ** CONC OF PM10     IN MICROGRAMS/M**3                          **
 
                                                       DATE                                                                    NETWORK
 GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   
-ALL      HIGH   1ST HIGH VALUE IS     264.11465  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   2ND HIGH VALUE IS      28.85267  ON 88030316: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   3RD HIGH VALUE IS       5.38227  ON 88030108: AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1   HIGH   1ST HIGH VALUE IS    1597.71047  ON 17011008: AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    1535.75592  ON 17010808: AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     976.43178  ON 17010108: AT (    -866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -247,22 +246,22 @@ ALL      HIGH   1ST HIGH VALUE IS     264.11465  ON 88030116: AT (     433.01,  
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   8
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
                                                 *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
 
 
-                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+                                    ** CONC OF PM10     IN MICROGRAMS/M**3                          **
 
                                                       DATE                                                                    NETWORK
 GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   
-ALL      HIGH   1ST HIGH VALUE IS      88.89511  ON 88030124: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   2ND HIGH VALUE IS      10.09519  ON 88030324: AT (     866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
-         HIGH   3RD HIGH VALUE IS       1.01040  ON 88030424: AT (     342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
+STACK1   HIGH   1ST HIGH VALUE IS     619.45435  ON 17010124: AT (    -866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     538.85592  ON 17010824: AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     493.01892  ON 17010524: AT (    -342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
 
 
  *** RECEPTOR TYPES:  GC = GRIDCART
@@ -270,21 +269,21 @@ ALL      HIGH   1ST HIGH VALUE IS      88.89511  ON 88030124: AT (     433.01,  
                       DC = DISCCART
                       DP = DISCPOLR
  *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with PRIME             ***        07/18/19
- *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:11:21
+ *** AERMET - VERSION  15181 ***   ***                                                                      ***        11:38:14
                                                                                                                        PAGE   9
- **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FASTALL   BETA      RURAL     MMIF_Data
 
  *** Message Summary : AERMOD Model Execution ***
 
   --------- Summary of Total Messages --------
   
  A Total of            0 Fatal Error Message(s)
- A Total of            4 Warning Message(s)
- A Total of            0 Informational Message(s)
+ A Total of          106 Warning Message(s)
+ A Total of            1 Informational Message(s)
 
- A Total of           96 Hours Were Processed
+ A Total of          240 Hours Were Processed
 
- A Total of            0 Calm Hours Identified
+ A Total of            1 Calm Hours Identified
 
  A Total of            0 Missing Hours Identified (  0.00 Percent)
   
@@ -294,7 +293,109 @@ ALL      HIGH   1ST HIGH VALUE IS      88.89511  ON 88030124: AT (     433.01,  
   
   
     ********   WARNING MESSAGES   ******** 
- CO W361      15       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
- CO W362      15       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     3-hr Ave
- CO W362      15       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     8-hr Ave
- CO W362      15       COCARD: Multiyear 1h NO2/SO2 processing not applicable for    24-hr Ave
+ ME W182      71       MEOPEN: MMIF-generated meteorological inputs were used     BETA Non-Def
+ ME W530      71       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     SITEDATA
+ MX W394       1       METEXT: Met data may be from outdated version of AERMET:     No NAD/ADJ
+ MX W479       1       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.860
+ MX W479       2       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.957
+ MX W479       3       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.795
+ MX W479      18       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.048
+ MX W479      19       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.741
+ MX W479      20       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.270
+ MX W479      21       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.488
+ MX W479      22       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.750
+ MX W479      23       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.612
+ MX W479      24       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.094
+ MX W479      25       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.538
+ MX W479      26       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.859
+ MX W479      27       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.962
+ MX W479      28       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.885
+ MX W479      29       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.849
+ MX W479      30       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.005
+ MX W479      42       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.352
+ MX W479      43       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.514
+ MX W479      44       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.633
+ MX W479      46       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.122
+ MX W479      47       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.259
+ MX W479      48       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.709
+ MX W479      50       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.806
+ MX W479      51       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.839
+ MX W479      52       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.708
+ MX W479      53       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.571
+ MX W479      54       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.669
+ MX W479      66       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.070
+ MX W479      67       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.160
+ MX W479      68       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.844
+ MX W479      69       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.548
+ MX W479      70       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.517
+ MX W479      71       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.619
+ MX W479      72       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.541
+ MX W479      73       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.502
+ MX W479      74       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.523
+ MX W479      90       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.573
+ MX W479      91       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.262
+ MX W479      92       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.273
+ MX W479      93       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.155
+ MX W479      94       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.743
+ MX W479      95       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.878
+ MX W479      96       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.856
+ MX W479      97       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.930
+ MX W479      98       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.037
+ MX W479      99       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.037
+ MX W479     100       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.860
+ MX W479     102       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.508
+ MX W479     114       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.589
+ MX W479     115       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.203
+ MX W479     116       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.419
+ MX W479     117       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.194
+ MX W479     118       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.190
+ MX W479     119       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.548
+ MX W479     120       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.796
+ MX W479     121       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.931
+ MX W479     122       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.098
+ MX W479     123       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.223
+ MX W479     124       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.875
+ MX W479     138       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.949
+ MX W479     139       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.425
+ MX W479     140       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.498
+ MX W479     141       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.491
+ MX W479     142       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.119
+ MX W479     143       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.047
+ MX W479     144       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.851
+ MX W479     145       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.741
+ MX W479     146       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.855
+ MX W479     147       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.687
+ MX W479     148       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.105
+ MX W479     149       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.791
+ MX W479     150       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.991
+ MX W479     163       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.770
+ MX W479     164       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.414
+ MX W479     165       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.868
+ MX W479     168       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.986
+ MX W479     169       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.691
+ MX W479     170       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.760
+ MX W479     171       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.744
+ MX W479     172       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.637
+ MX W479     173       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.978
+ MX W479     174       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.794
+ MX W479     186       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.524
+ MX W479     187       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.632
+ MX W479     188       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.844
+ MX W479     189       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.116
+ MX W479     190       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.410
+ MX W479     191       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.779
+ MX W479     192       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.647
+ MX W479     193       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.507
+ MX W479     194       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.639
+ MX W479     195       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.554
+ MX W479     196       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.651
+ MX W479     197       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.668
+ MX W479     198       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.728
+ MX W479     211       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.571
+ MX W479     212       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.198
+ MX W479     213       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=1.487
+ MX W479     214       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.983
+ MX W479     217       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.637
+ MX W479     218       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.560
+ MX W479     219       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.519
+ MX W479     220       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.504
